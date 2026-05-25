@@ -1,0 +1,157 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Obsidian Drive Syncer | ${SITE_TITLE}`} description="Detailed page for Obsidian Drive Syncer plugin." />
+		<style>
+			.plugin-container {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 4rem 1.5rem;
+			}
+			.plugin-header {
+				border-bottom: 1px solid #e2e8f0;
+				padding-bottom: 2.5rem;
+				margin-bottom: 2.5rem;
+			}
+			.badge {
+				display: inline-block;
+				padding: 0.25rem 0.75rem;
+				background-color: #ebf8ff;
+				color: #2b6cb0;
+				border-radius: 9999px;
+				font-size: 0.8rem;
+				font-weight: 600;
+				margin-bottom: 1rem;
+			}
+			h1 {
+				font-size: 3rem;
+				font-weight: 800;
+				line-height: 1.15;
+				color: #1a202c;
+				margin-bottom: 1rem;
+				letter-spacing: -0.03em;
+			}
+			.description-lead {
+				font-size: 1.25rem;
+				color: #4a5568;
+				line-height: 1.7;
+				margin-bottom: 2rem;
+			}
+			.cta-group {
+				display: flex;
+				gap: 1rem;
+				flex-wrap: wrap;
+			}
+			.btn {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0.75rem 1.5rem;
+				border-radius: 8px;
+				font-weight: 600;
+				text-decoration: none;
+				transition: all 0.2s ease;
+				font-size: 1rem;
+			}
+			.btn-primary {
+				background-color: #2b6cb0;
+				color: #ffffff;
+				box-shadow: 0 4px 6px -1px rgba(43, 108, 176, 0.2);
+			}
+			.btn-primary:hover {
+				background-color: #1a365d;
+				transform: translateY(-1px);
+				color: #ffffff;
+			}
+			.btn-secondary {
+				background-color: #ffffff;
+				color: #4a5568;
+				border: 1px solid #cbd5e1;
+			}
+			.btn-secondary:hover {
+				background-color: #f8fafc;
+				border-color: #94a3b8;
+				transform: translateY(-1px);
+			}
+			.feature-section {
+				margin-top: 3rem;
+			}
+			.feature-section h2 {
+				font-size: 1.75rem;
+				font-weight: 700;
+				color: #2d3748;
+				margin-bottom: 1.5rem;
+			}
+			.features-list {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 1.5rem;
+			}
+			.feature-item {
+				background: #f8fafc;
+				border-radius: 12px;
+				padding: 1.5rem;
+				border: 1px solid #e2e8f0;
+			}
+			.feature-item h3 {
+				font-size: 1.2rem;
+				font-weight: 600;
+				color: #1a202c;
+				margin-bottom: 0.5rem;
+			}
+			.feature-item p {
+				color: #4a5568;
+				line-height: 1.6;
+				margin-bottom: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="plugin-container">
+				<div class="plugin-header">
+					<span class="badge">Active Project</span>
+					<h1>Obsidian Drive Syncer</h1>
+					<p class="description-lead">
+						A simple obsidian plugin which allows you to keep your obsidian in sync with google drive across your devices. It can be installed on any obsidian application and requires you to authenticate via your google account.
+					</p>
+					<div class="cta-group">
+						<a href="https://github.com/ccmysen/obsidian_drive_sync" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+							Get on GitHub
+						</a>
+						<a href="mailto:obsidian-drive-support@googlegroups.com" class="btn btn-secondary">
+							Support Email
+						</a>
+					</div>
+				</div>
+
+				<div class="feature-section">
+					<h2>Key Features</h2>
+					<div class="features-list">
+						<div class="feature-item">
+							<h3>Seamless Syncing</h3>
+							<p>Keep your notes, folders, and settings in complete synchronization with your Google Drive account automatically.</p>
+						</div>
+						<div class="feature-item">
+							<h3>Multi-Device Compatibility</h3>
+							<p>Works smoothly across any device supporting Obsidian (Desktop, Tablet, or Mobile) to keep your knowledge base accessible everywhere.</p>
+						</div>
+						<div class="feature-item">
+							<h3>Secure Google OAuth</h3>
+							<p>Authentication is performed securely directly with your Google Account, ensuring your credentials are never exposed.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
