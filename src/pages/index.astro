@@ -9,41 +9,170 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.hero {
+				text-align: center;
+				padding: 4rem 1rem 3rem 1rem;
+				max-width: 800px;
+				margin: 0 auto;
+			}
+			.hero h1 {
+				font-size: 3rem;
+				font-weight: 800;
+				line-height: 1.15;
+				margin-bottom: 1.5rem;
+				letter-spacing: -0.03em;
+				background: linear-gradient(45deg, #111111, #444444);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			.hero p {
+				font-size: 1.25rem;
+				color: #555555;
+				max-width: 600px;
+				margin: 0 auto 2rem auto;
+				line-height: 1.6;
+			}
+			.projects-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2rem;
+				max-width: 900px;
+				margin: 2rem auto 4rem auto;
+				padding: 0 1rem;
+			}
+			.card {
+				background: #ffffff;
+				border: 1px solid #e2e8f0;
+				border-radius: 16px;
+				padding: 2rem;
+				transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				position: relative;
+				overflow: hidden;
+			}
+			.card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 4px;
+				background: linear-gradient(90deg, #3182ce, #319795);
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+			.card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.08);
+				border-color: #cbd5e1;
+			}
+			.card:hover::before {
+				opacity: 1;
+			}
+			.card h3 {
+				font-size: 1.5rem;
+				font-weight: 700;
+				margin-bottom: 0.75rem;
+				color: #1a202c;
+			}
+			.card p {
+				font-size: 1rem;
+				color: #4a5568;
+				line-height: 1.6;
+				margin-bottom: 1.5rem;
+				flex-grow: 1;
+			}
+			.card .badge {
+				display: inline-block;
+				padding: 0.25rem 0.75rem;
+				background-color: #ebf8ff;
+				color: #2b6cb0;
+				border-radius: 9999px;
+				font-size: 0.75rem;
+				font-weight: 600;
+				margin-bottom: 1rem;
+				align-self: flex-start;
+			}
+			.card-link {
+				display: inline-flex;
+				align-items: center;
+				font-weight: 600;
+				color: #2b6cb0;
+				text-decoration: none;
+				gap: 0.5rem;
+				font-size: 0.95rem;
+				transition: color 0.2s ease;
+			}
+			.card-link:hover {
+				color: #1a365d;
+			}
+			.card-link svg {
+				width: 16px;
+				height: 16px;
+				transition: transform 0.2s ease;
+			}
+			.card-link:hover svg {
+				transform: translateX(4px);
+			}
+
+			@media (max-width: 640px) {
+				.hero h1 {
+					font-size: 2.25rem;
+				}
+				.projects-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="hero">
+				<h1>Welcome to the home of obsidian plugins.</h1>
+				<p>
+					Discover and use clean, reliable, and beautifully integrated plugins designed to enhance your Obsidian vault experience.
+				</p>
+			</section>
+
+			<section class="projects-grid">
+				<div class="card">
+					<span class="badge">Google Drive Sync</span>
+					<div>
+						<h3>Obsidian Drive Sync</h3>
+						<p>
+							A reliable, secure plugin to keep your Obsidian vault synchronized with Google Drive across devices automatically.
+						</p>
+					</div>
+					<a href="https://github.com/ccmysen/obsidian_drive_sync" target="_blank" rel="noopener noreferrer" class="card-link">
+						View on GitHub
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<line x1="5" y1="12" x2="19" y2="12"></line>
+							<polyline points="12 5 19 12 12 19"></polyline>
+						</svg>
+					</a>
+				</div>
+
+				<div class="card">
+					<span class="badge" style="background-color: #f0fff4; color: #276749;">Support</span>
+					<div>
+						<h3>Get Help & Support</h3>
+						<p>
+							Have feedback or run into an issue? Drop us an email at our support alias or join the Google Group discussion.
+						</p>
+					</div>
+					<a href="mailto:obsidian-drive-support@googlegroups.com" class="card-link" style="color: #276749;">
+						Email Support
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<line x1="5" y1="12" x2="19" y2="12"></line>
+							<polyline points="12 5 19 12 12 19"></polyline>
+						</svg>
+					</a>
+				</div>
+			</section>
 		</main>
 		<Footer />
 	</body>
