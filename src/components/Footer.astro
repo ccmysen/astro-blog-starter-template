@@ -3,7 +3,8 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Obsidian Plugins. All rights reserved.
+	<p>&copy; {today.getFullYear()} Obsidian Plugins. All rights reserved.</p>
+	<p><a href="/privacy" class="privacy-link">Privacy Policy</a></p>
 </footer>
 <style>
 	footer {
@@ -12,5 +13,17 @@ const today = new Date();
 		color: rgb(var(--gray));
 		text-align: center;
 		border-top: 1px solid #eaeaea;
+	}
+	footer p {
+		margin: 0.5em 0;
+	}
+	.privacy-link {
+		color: rgb(var(--gray));
+		font-size: 0.9rem;
+		text-decoration: none;
+	}
+	.privacy-link:hover {
+		color: rgb(var(--gray-dark));
+		text-decoration: underline;
 	}
 </style>

@@ -1,0 +1,78 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Privacy Policy | ${SITE_TITLE}`} description="Privacy Policy for Obsidian Plugins." />
+		<style>
+			.privacy-container {
+				max-width: 720px;
+				margin: 0 auto;
+				padding: 4rem 1.5rem;
+			}
+			h1 {
+				font-size: 2.5rem;
+				font-weight: 800;
+				margin-bottom: 2rem;
+				letter-spacing: -0.02em;
+				color: #1a202c;
+			}
+			p {
+				color: #4a5568;
+				line-height: 1.8;
+				margin-bottom: 1.5rem;
+				font-size: 1.1rem;
+			}
+			.policy-section {
+				background: #f7fafc;
+				border-left: 4px solid #3182ce;
+				padding: 1.5rem 2rem;
+				border-radius: 0 8px 8px 0;
+				margin: 2rem 0;
+			}
+			.policy-section p {
+				margin-bottom: 0;
+				font-weight: 500;
+				color: #2d3748;
+			}
+			.last-updated {
+				font-size: 0.9rem;
+				color: #718096;
+				margin-top: 3rem;
+				border-top: 1px solid #e2e8f0;
+				padding-top: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="privacy-container">
+				<h1>Privacy Policy</h1>
+				<p>
+					We value your privacy and are committed to protecting your personal data. This privacy policy explains how we handle user information.
+				</p>
+				
+				<div class="policy-section">
+					<p>
+						Any data we process is used purely to authenticate you to your accounts and make our services available to you. No data other than usage statistics and information used to improve the product will be collected.
+					</p>
+				</div>
+
+				<p>
+					If you have any questions about this privacy policy, please contact us via the support alias provided on the home page.
+				</p>
+
+				<div class="last-updated">
+					Last updated: May 25, 2026
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
