@@ -1,0 +1,98 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Terms of Service | ${SITE_TITLE}`} description="Terms of Service for Obsidian Plugins." />
+		<style>
+			.terms-container {
+				max-width: 720px;
+				margin: 0 auto;
+				padding: 4rem 1.5rem;
+			}
+			h1 {
+				font-size: 2.5rem;
+				font-weight: 800;
+				margin-bottom: 2rem;
+				letter-spacing: -0.02em;
+				color: #1a202c;
+			}
+			h2 {
+				font-size: 1.5rem;
+				font-weight: 700;
+				margin: 2rem 0 1rem 0;
+				color: #2d3748;
+			}
+			p {
+				color: #4a5568;
+				line-height: 1.8;
+				margin-bottom: 1.5rem;
+				font-size: 1.1rem;
+			}
+			.disclaimer-box {
+				background: #fffaf0;
+				border-left: 4px solid #dd6b20;
+				padding: 1.5rem 2rem;
+				border-radius: 0 8px 8px 0;
+				margin: 2rem 0;
+			}
+			.disclaimer-box p {
+				margin-bottom: 0;
+				font-weight: 600;
+				color: #7b341e;
+				text-transform: uppercase;
+				font-size: 0.95rem;
+				letter-spacing: 0.05em;
+			}
+			.last-updated {
+				font-size: 0.9rem;
+				color: #718096;
+				margin-top: 3rem;
+				border-top: 1px solid #e2e8f0;
+				padding-top: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="terms-container">
+				<h1>Terms of Service</h1>
+				<p>
+					Welcome! By using our plugins or services, you agree to comply with and be bound by the following terms and conditions.
+				</p>
+
+				<h2>1. Personal and Internal Use Only</h2>
+				<p>
+					You are granted permission to use these plugins and services for your own personal or internal organizational use. You agree not to distribute, modify (except as allowed under open-source licensing), or exploit the software for unauthorized commercial purposes.
+				</p>
+
+				<h2>2. User Responsibility & Liability Limit</h2>
+				<p>
+					You agree that you will use these products at your own discretion. You will not hold the creator(s) or contributor(s) liable for any inappropriate use, data loss, misconfiguration, or disruption of service resulting from the installation or execution of these plugins.
+				</p>
+
+				<div class="disclaimer-box">
+					<p>
+						THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+					</p>
+				</div>
+
+				<h2>3. External Services</h2>
+				<p>
+					Certain plugins connect to third-party services (such as Google Drive). Your use of those third-party services is governed entirely by their respective terms of service and privacy policies.
+				</p>
+
+				<div class="last-updated">
+					Last updated: May 25, 2026
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
