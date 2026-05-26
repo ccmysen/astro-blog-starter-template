@@ -99,6 +99,36 @@ import { SITE_TITLE } from '../../consts';
 				color: #2d3748;
 				margin-bottom: 1.5rem;
 			}
+			.purpose-section {
+				margin-top: 3rem;
+				background: #f8fafc;
+				border: 1px solid #e2e8f0;
+				border-radius: 16px;
+				padding: 2.5rem;
+			}
+			.purpose-section h2 {
+				font-size: 1.75rem;
+				font-weight: 700;
+				color: #2d3748;
+				margin-top: 0;
+				margin-bottom: 1.25rem;
+			}
+			.purpose-section h3 {
+				font-size: 1.2rem;
+				font-weight: 600;
+				color: #1a202c;
+				margin-top: 1.5rem;
+				margin-bottom: 0.5rem;
+			}
+			.purpose-section p {
+				color: #4a5568;
+				line-height: 1.7;
+				margin-bottom: 1rem;
+				font-size: 1.05rem;
+			}
+			.purpose-section p:last-child {
+				margin-bottom: 0;
+			}
 			.features-list {
 				display: grid;
 				grid-template-columns: 1fr;
@@ -124,7 +154,7 @@ import { SITE_TITLE } from '../../consts';
 		</style>
 	</head>
 	<body>
-		<Header />
+		<Header brandTitle="Obsidian Drive Syncer" />
 		<main>
 			<div class="plugin-container">
 				<div class="plugin-header">
@@ -134,7 +164,7 @@ import { SITE_TITLE } from '../../consts';
 						A simple obsidian plugin which allows you to keep your obsidian in sync with google drive across your devices. It can be installed on any obsidian application and requires you to authenticate via your google account.
 					</p>
 					<p class="privacy-note">
-						Please review our <a href="/privacy-policy/">Privacy Policy</a> regarding Google OAuth authentication.
+						Please review our <a href="https://obsidian-plugins.mysen.net/privacy-policy/">Privacy Policy</a> regarding Google OAuth authentication.
 					</p>
 					<div class="cta-group">
 						<a href="https://github.com/ccmysen/obsidian_drive_sync" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
@@ -162,6 +192,21 @@ import { SITE_TITLE } from '../../consts';
 							<p>Authentication is performed securely directly with your Google Account, ensuring your credentials are never exposed.</p>
 						</div>
 					</div>
+				</div>
+
+				<div class="purpose-section">
+					<h2>Application Purpose & OAuth Data Usage</h2>
+					<p>
+						<strong>Obsidian Drive Syncer</strong> is a client-side integration tool designed to synchronize your personal Obsidian markdown notes and vault directories directly with your own Google Drive storage account.
+					</p>
+					<h3>How We Use Your Data</h3>
+					<p>
+						This application connects to the Google Drive API for the sole purpose of backup and file synchronization (uploading local changes to Google Drive and downloading cloud changes to your local vault). All connection processes run locally on your device, and no vault contents or user configuration data are ever sent to, stored by, or shared with any third-party server.
+					</p>
+					<h3>Consent & Scope</h3>
+					<p>
+						The application requests Google authentication to access file storage directories created by the plugin. You can read details in our absolute <a href="https://obsidian-plugins.mysen.net/privacy-policy/">Privacy Policy</a>.
+					</p>
 				</div>
 			</div>
 		</main>
